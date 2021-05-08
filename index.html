@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculation program</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .text_hd1 {
+            background: white
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="answer-section"></div>
+    <br>
+
+    <div class="row align-items-start">
+
+        <div class="col">
+
+            <h3 align='center'><img
+                    src="https://previews.123rf.com/images/dizanna/dizanna1708/dizanna170800094/83752730-bmi-body-mass-index-apple-word-cloud-collage-health-concept-background.jpg"
+                    width="100" lang="100"></h3>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+            <br>
+            <h3 align='center'>
+
+        </div>
+        <hr>
+        <br>
+        <br>
+        <div class="row align-items-start">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <h1>
+                    <p>คำนวณหาค่าดัชนีมวลกาย</p>
+                </h1>
+                <h6>การหาค่าดัชนีมวลกาย (Body Mass Index : BMI) คือเป็นมาตรการที่ใช้ประเมินภาวะอ้วนและผอมในผู้ใหญ่
+                    ตั้งแต่อายุ 20 ปีขึ้นไป สามารถทำได้โดยการชั่งน้ำหนักตัวเป็นกิโลกรัม และวัดส่วนสูงเป็นเซนติเมตร
+                    แล้วนำมาหาดัชมีมวลกาย โดยใช้โปรแกรมวัดค่าความอ้วนข้างต้น</h6>
+                <h1 align='center'><img src="https://www.jjprocycling.com/wp-content/uploads/2018/06/BMI.jpg"
+                        width="200" lang="200">
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container-f">
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading"></h4>
+
+                <div class="row align-items-start">
+                    <div class="col">
+
+                    </div>
+
+                    <div class="col">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <h6>ใส่น้ำหนักของคุณ</h6>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                <h6 align='left'>น้ำหนักตัว (kg)</h6><input id="number-weight" type="text" class="form-control" type="text"
+                                    placeholder="Default input" aria-label="default input example"><br>
+                                <h6 align='left'>ส่วนสูง (cm.)<input id="number-height" type="text" class="form-control" type="text"
+                                        placeholder="Default input" aria-label="default input example"><br>
+
+                                    <h3 align='right'><button id="run-button" type="button" class="btn btn-danger"><h6 onclick='calculateBMI()'>คำนวณ</h6></button></h3>
+                                  
+                            </div>
+                            <div class="card-footer text-muted">
+
+                            </div> 
+                        </div>
+
+                        <div class="col-12">
+
+                        </div>
+                        </p>
+
+
+                    </div>
+
+                    <div class="col">
+
+                    </div>
+                </div>
+            </div>
+            <br>
+
+        </div>
+
+
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">BMI kg/m2</th>
+                            <th scope="col">อยู่ในเกณฑ์</th>
+                            <th scope="col">ภาวะเสี่ยงต่อโรค</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>น้อยกว่า 18.50</td>
+                            <td>น้ำหนักน้อย / ผอม</td>
+                            <td>มากกว่าคนปกติ</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>ระหว่าง 18.50 - 22.90</td>
+                            <td>ปกติ (สุขภาพดี)</td>
+                            <td>เท่าคนปกติ</td>
+                        </tr>
+                        <th scope="row">3</th>
+                        <td>ระหว่าง 23 - 24.90</td>
+                        <td>ท้วม / โรคอ้วนระดับ 1</td>
+                        <td>อันตรายระดับ 1</td>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>ระหว่าง 25 - 29.90</td>
+                            <td>อ้วน / โรคอ้วนระดับ 2</td>
+                            <td>อันตรายระดับ 2</td>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>มากกว่า 30</td>
+                            <td>อ้วนมาก / โรคอ้วนระดับ 3</td>
+                            <td>อันตรายระดับ 3</td>
+
+
+                            </td>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">เชื่อมต่อกับเรา</h5>
+                    <p>โปรดลงทะเบียนเพื่อรับข้อมูลข่าวสาร</p>
+
+                    <p>
+                    <form>
+
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3">
+                            </div>
+
+                        </div>
+                        <button type="button" class="btn btn-danger"><h6 onclick='alert("sunny")'>รับข่าวสาร</h6></button>
+                       
+                    </form>
+
+
+                    </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">ติดต่อเรา</h5>
+                         Bangkok 10120 Thailand.
+
+                    <p>
+
+                    </p>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">Math.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
